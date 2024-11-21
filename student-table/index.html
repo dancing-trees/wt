@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Table Styling</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Ensures borders don't double up */
+            margin: 20px 0; /* Adds space above and below the table */
+        }
+
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd; /* Light gray border */
+        }
+
+        thead {
+            background-color: #f2f2f2; /* Light gray background for the header */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Zebra striping: even rows have a light background */
+        }
+
+        tr:hover {
+            background-color: #f1f1f1; /* Hover effect for rows */
+        }
+
+        th {
+            background-color: #4CAF50; /* Green background for the header */
+            color: white; /* White text color for header */
+        }
+
+        td {
+            text-align: center; /* Center-align data in the cells */
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>Student Details</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Courses</th>
+                <th>Organsisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rick</td>
+                <td>Computer Engineering</td>
+                <td>ITM Gwalior</td>
+                
+            </tr>
+            <tr>
+                <td>Morty</td>
+                <td>Finance</td>
+                <td>Harvard</td>
+               
+            </tr>
+            <tr>
+                <td>Summer</td>
+                <td>Fashion designing</td>
+                <td>NIFT Delhi</td>
+               
+            </tr>
+            <tr>
+                <td>Jerry</td>
+                <td>Bachelor of science</td>
+                <td>Yale</td>
+            </tr>
+            <tr>
+              <td>Birdperson</td>
+              <td>Aernoutical Engineering</td>
+              <td>Coulombia</td>
+            </tr>
+            <tr>
+              <td>Beth</td>
+              <td>Literature</td>
+              <td>Oxford</td>
+            </tr>
+            <tr>
+              <td>Toby</td>
+              <td>Medicine</td>
+              <td>Harvard</td>
+            </tr>
+            <tr>
+              <td>Ritik</td>
+              <td>Bachelor in Computer Application</td>
+              <td>ITM Gwalior</td>
+            </tr>
+            <tr>
+              <td>Cassie</td>
+              <td>Bachelor in Arts</td>
+              <td>Roundview College</td>
+            </tr>
+            <tr>
+              <td>Tony</td>
+              <td>Management</td>
+              <td>Roundview College</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
