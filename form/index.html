@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Admission form</h2>
+    <form id="userForm">
+
+        <fieldset>
+            <legend>Enter your full name</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select Your Gender:</legend>
+            <label>
+                <input type="radio" name="gender" value="male" checked> Male
+            </label><br>
+
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label><br>
+
+            <label>
+                <input type="radio" name="gender" value="other"> Other
+            </label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>your dob please</legend>
+            <label for="dob">calendar:</label>
+            <input type="date" id="dob" name="dob" placeholder="enter your dob" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>What you want to pursue?</legend>
+            <label for="course">Select a course:</label>
+            <select id="course" name="course">
+                <option value="bsc">Bsc</option>
+                <option value="bca">BCA</option>
+                <option value="btech" selected>B.tech</option>
+                <option value="literature">Literature</option>
+            </select><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Enter you email address:</legend>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="please enter email" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Do you want Hostel?</legend>
+            <label for="hostel">yes or no:</label>
+            <select name="hostel" id="hostel">
+              <option value="yes">yes</option>
+              <option value="no">no</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="response"></div>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+
+            const dob = document.getElementById('dob').value;
+
+            const course = document.getElementById('course').value;
+
+            const email = document.getElementById('email').value;
+
+            const hostel = document.getElementById('hostel').value;
+
+            
+            const responseDiv = document.getElementById('response');
+            responseDiv.innerHTML = `
+                <h3>Your Selections:</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Gender:</strong> ${gender}</p>
+                <p><strong>your dob:</strong> ${dob}</p>
+                <p><strong>Your desired course:</strong> ${course}</p>
+                <p><strong>Your given email:</strong> ${email}</p>
+                <p><strong>Your answer for wanting hostel:</strong> ${hostel}</p>
+            `;
+        });
+    </script>
+
+</body>
+</html>
